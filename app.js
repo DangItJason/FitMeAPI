@@ -4,10 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require('./routes/testAPI');
 var cors = require('cors'); //this is for testing on different ports.
+var mongoose = require('mongoose'); //DB
+
+mongoose.connect('mongodb://localhost:27017/FitMeDB', { useUnifiedTopology: true, useNewUrlParser: true }) //Mongoose is now connected to MongoDB
 
 var app = express();
 
