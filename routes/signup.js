@@ -11,7 +11,7 @@ router.post('/signup', function(req, res, next) {
         email: req.body.email
     }, function(err, user) {
         if (err) return next(err);
-        //User already exists
+        //User already exists... go to next call.
         if (user) return next(console.log("User exists: " + user));
         //Add User to Database
         console.log("Creating new user");
