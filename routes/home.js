@@ -22,4 +22,11 @@ router.post('/home', function(req, res, next) {
     })
 });
 
+//Push exercises to data base from home page for desired user
+router.post('/home', function(req, res, next) {
+
+    console.log("Sending exercise to database")
+    //Fill in blanks
+})
+
 module.exports = router;
