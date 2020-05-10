@@ -3,11 +3,11 @@ var router = express.Router();
 var User = require('../models.js');
 
 //Retrieves exercises from database on home launch.
-router.post('/home', function(req, res, next) {
+router.post('/homes', function(req, res, next) {
     //Look into data base for 1. email's exercises
     //Return excercises as JSON obj.
 
-    console.log("Searching for **email's** exercises")
+    console.log("Searching for **email's** exercises");
     User.findOne({
         email: req.body.email,
     }, function(err, user) {
