@@ -10,10 +10,10 @@ var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
 var homeRouter = require('./routes/home');
 
-var cors = require('cors'); //this is for testing on different ports.
+var cors = require('cors'); //Dependicie for testing on different ports.
 var mongoose = require('mongoose'); //DB
 
-mongoose.connect('mongodb://localhost:27017/FitMeDB', { useUnifiedTopology: true, useNewUrlParser: true }) //Mongoose is now connected to MongoDB
+mongoose.connect('mongodb://localhost:27017/FitMeDB', { useUnifiedTopology: true, useNewUrlParser: true })
 
 var app = express();
 

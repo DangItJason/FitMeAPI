@@ -18,6 +18,7 @@ router.post('/home', function(req, res, next) {
             console.log("Found **email's** exercises");
             res.send(user.exercises);
         }
+        console.log("Did not found **email's** exercises");
     })
 });
 
